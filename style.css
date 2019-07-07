@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+  --primary-color: #003699;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --lose-color: #dc3545;
+  --win-color: #28a745;
+  --modal-duration: 1s;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.restart-btn {
+  display: none;
+  background: var(--light-color);
+  color: #333;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.restart-btn:hover {
+  background: #dbdbdb;
+}
+
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.score p:first-child {
+  background-color: var(--primary-color);
+}
+
+.score p:last-child {
+  background-color: var(--dark-color);
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.choice {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.choice:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 767px) {
+  .choice {
+    font-size: 110px;
+  }
+}
+
+@media (max-width: 467px) {
+  .choice {
+    font-size: 60px;
+  }
+}
