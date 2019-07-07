@@ -33,6 +33,10 @@
   color: var(--win-color);
 }
 
+.text-lose {
+  color: var(--lose-color);
+}
+
 @keyframes modal-open {
   from {
     opacity: 0;
